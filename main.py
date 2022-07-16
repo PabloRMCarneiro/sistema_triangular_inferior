@@ -28,7 +28,7 @@ def entrada():
                 try:
                     print("Informe o coeficiente da A{}{}: ".format(i+1, j+1))
                     line.append(float(input()))
-                    if(line[j] == 0):
+                    if( i == j and line[j] == 0):
                         return 5
                 except ValueError:
                     return 3
@@ -118,7 +118,7 @@ def test():
     elif(aux == 4):
         resultado += '\nTEST3 FAILURE: Os coeficientes do vetor independente não podem ser caracteres\n'
     elif(aux == 5):
-        resultado +='\nTEST4 FAILURE: Os coeficientes da matriz não podem ser nulos\n'
+        resultado +='\nTEST4 FAILURE: Os coeficientes da diagonal principal da matriz não podem ser nulos\n'
     else:
         A = aux[0]
         B = aux[1]
